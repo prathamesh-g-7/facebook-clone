@@ -1,0 +1,165 @@
+.createPost {
+  width: 450px;
+  height: 350px;
+  background-color: #242526;
+}
+
+.createPost__top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.createPost__topProfile {
+  margin-right: 10px;
+}
+
+.createPost__topName > h3 {
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.createPost__topName > p {
+  color: aliceblue;
+  font-size: 13px;
+  background-color: rgb(128, 128, 128, 0.4);
+  width: 60px;
+  padding: 2px;
+  display: flex;
+  margin-top: 4px;
+  border-radius: 5px;
+}
+
+.public {
+  font-size: 12px !important;
+  margin-right: 4px;
+}
+
+.createPost__main {
+  width: 100%;
+  height: 100px;
+}
+
+.createPost__main > h4 {
+  color: gray;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.createPost__main > h4 > input {
+  width: 100%;
+  height: 50px;
+  background-color: #242526;
+  border: none;
+  outline-width: 0;
+  color: white;
+}
+
+.createPost__inputSetion {
+  font-size: 24px;
+}
+
+.createPost__emoji {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.createPost__emoji > .MuiSvgIcon-root {
+  font-size: 30px !important;
+}
+
+.color {
+  color: #dc79c9;
+}
+
+.emoji {
+  color: gray;
+}
+
+.createPost__attach {
+  width: 95%;
+  height: 50px;
+  border: 1px solid rgb(128, 128, 128, 0.5);
+  margin-left: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createPost__attachText {
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.createPost__attachText > h3 {
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.createPost__attachText > input {
+  opacity: 0;
+  margin-top: -15px;
+  position: absolute;
+  border: none;
+}
+
+.createPost__attachIcons {
+  padding: 10px;
+}
+
+.createPost__attachIcons > .MuiSvgIcon-root {
+  font-size: 30px !important;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#help {
+  color: #f02849;
+}
+
+#photo {
+  color: #45bd62;
+}
+
+#tag {
+  color: #1877f2;
+}
+
+#location {
+  color: #f5533d;
+}
+
+#fellings {
+  color: #f7b928;
+}
+
+.createPost__button {
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.createPost__button > button {
+  width: 90%;
+  padding: 8px;
+  border: none;
+  outline-width: 0;
+  background-color: #1877f2;
+  color: aliceblue;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+  margin-left: 12px;
+  cursor: pointer;
+}

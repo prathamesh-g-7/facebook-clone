@@ -1,0 +1,264 @@
+.feed {
+  width: 100%;
+  height: auto;
+}
+
+.feed__top {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.feed__top > h4 {
+  color: grey;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.feed__top > h4:hover {
+  background-color: rgba(126, 126, 126, 0.2);
+}
+
+.feed__top > .MuiSvgIcon-root {
+  color: gray;
+  display: flex;
+  align-items: center;
+  padding-left: 49%;
+}
+.feed > hr {
+  opacity: 0.1;
+  width: 95%;
+  padding-left: 5px;
+}
+
+.feed__story {
+  width: 700px;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: visible;
+  /* display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); */
+}
+
+.hide {
+  display: none;
+}
+
+.feed__storyBlock {
+  width: 100px;
+  height: 190px;
+  margin-top: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.feed__storyBlock > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.create__story {
+  width: 100px;
+  height: 190px;
+  margin-top: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.create__story > span {
+  position: absolute;
+  bottom: 0;
+  background-color: #242526;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.create__story > span > .MuiSvgIcon-root {
+  margin-top: -10px;
+  font-size: 30px !important;
+  color: white;
+}
+
+.create__story > span > h3 {
+  width: 100%;
+  font-size: 17px;
+  padding: 6px;
+  font-weight: 300;
+  color: rgb(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.feed__upload {
+  width: 100%;
+  height: 130px;
+  background-color: #242526;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.feed__upload > hr {
+  opacity: 0.1;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feed__uploadSection {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.mind {
+  width: 100%;
+  height: 30px;
+  background-color: #3a3b3c;
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.mind > h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #b0b3b8;
+  padding: 5px;
+}
+
+.feed__uploadMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+}
+
+.feed__uploadMenuItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.feed__uploadMenuItem:hover {
+  background-color: rgb(128, 128, 128, 0.2);
+}
+
+.videocall {
+  color: #f02849;
+  font-size: 28px !important;
+}
+
+.photo {
+  color: #45bd62;
+  font-size: 28px !important;
+}
+
+.felling {
+  color: #d7a328;
+  font-size: 28px !important;
+}
+
+.feed__uploadMenuItem > h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #b0b3b8;
+  letter-spacing: 0.4px;
+  padding-left: 5px;
+}
+
+/* ##############  css for modal  #############*/
+
+.modal_buttonContainer {
+  display: flex;
+  background-color: #242526;
+}
+
+.modal_buttonContainerHeading {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.modal_button {
+  background-color: #3a3b3c;
+  color: #b0b3b8;
+  padding: 10px;
+  margin: 8px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.modal_buttonContainerHeading > h3 {
+  color: aliceblue;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  word-spacing: 4px;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 800ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .feed {
+    width: 100vw;
+  }
+  .feed__top {
+    width: 100vw;
+  }
+
+  .feed__top > .MuiSvgIcon-root {
+    display: none !important;
+  }
+
+  .feed__story {
+    width: 90vw;
+  }
+
+  .feed > hr {
+    opacity: 0.1;
+    width: 98%;
+  }
+
+  .feed__upload {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feed__uploadMenuItem > h3 {
+    font-size: 13px;
+  }
+}

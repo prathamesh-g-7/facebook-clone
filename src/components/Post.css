@@ -1,0 +1,213 @@
+.post {
+  width: 100%;
+  height: auto;
+  overflow-y: visible;
+  background-color: #242526;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.post__top {
+  display: flex;
+  padding: 10px;
+}
+
+.post__top > h3 {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  padding-left: 10px;
+}
+
+.post__avtar {
+  height: 35px !important;
+  width: 35px !important;
+}
+
+.dots {
+  margin-left: auto;
+  color: gray;
+}
+
+.post__textSection {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+}
+
+.post__textSection > p {
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+
+.post__image {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.post__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post__likeComment {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid rgb(128, 128, 128, 0.2);
+  border-bottom: 1px solid rgb(128, 128, 128, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.like,
+.comment {
+  display: flex;
+  align-items: center;
+  color: #b8bbbf;
+  width: 80px;
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.like:hover {
+  background-color: rgb(128, 128, 128, 0.2);
+}
+.comment:hover {
+  background-color: rgb(128, 128, 128, 0.2);
+}
+
+.post__likeComment > div > .MuiSvgIcon-root {
+  font-size: 20px !important;
+}
+
+.post__likeComment > div > h3 {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.post__writeComment {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.commentInput {
+  width: 100%;
+}
+.input {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline-width: 0;
+  background-color: #3a3b3c;
+  width: 92%;
+  padding: 5px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+.input > input {
+  background: transparent;
+  border: none;
+  outline-width: 0;
+  width: 100%;
+  color: white;
+}
+
+#a {
+  width: 30px !important;
+  height: 30px !important;
+  margin-left: 20px;
+}
+
+.input > .MuiSvgIcon-root {
+  color: #9e9e9e;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 20px !important;
+  border-radius: 10px;
+}
+
+.input > .MuiSvgIcon-root:hover {
+  background-color: rgb(128, 128, 128, 0.2);
+}
+
+.notFilled {
+  color: none;
+}
+
+.activeBtn {
+  color: #2d86ff;
+}
+
+/* css for comments section */
+
+.post__showComments {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+}
+
+.post__showCommentsInfo {
+  display: flex;
+  padding: 10px;
+}
+
+.post__showCommentsInfo > p {
+  font-size: 14px;
+  color: rgb(224, 224, 224);
+  margin-left: 10px;
+}
+
+#comment__avatar {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.post__showComments > p {
+  color: rgb(224, 224, 224);
+  font-size: 14px;
+  margin-left: 35px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #3a3b3c;
+  width: 50%;
+  height: auto;
+  letter-spacing: 0.4px;
+  line-height: 18px;
+}
+
+.cmt__btn {
+  display: none !important;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .post__showCommentsInfo > p {
+    font-size: 12px;
+  }
+}

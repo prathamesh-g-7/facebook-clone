@@ -1,0 +1,75 @@
+.sidebarRight {
+  float: right;
+  margin-top: 20px;
+  margin-left: 40px;
+  position: fixed;
+  top: 70px;
+}
+
+.sidebarRight__birthday {
+  width: 75%;
+  height: 80px;
+  background-color: #242526;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  padding: 10px;
+}
+
+.sidebarRight__birthdayTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sidebarRight__birthdayTop > h3 {
+  color: #ebebeb;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.sidebarRight__birthday > h4 {
+  color: #ebebeb;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  word-spacing: 1px;
+  padding: 5px;
+}
+
+.sidebarRight__birthdayTop > .MuiSvgIcon-root {
+  padding: 5px;
+  color: #db4a8c;
+}
+.sidebarRight__ad {
+  width: 90%;
+  height: 200px;
+  display: flex;
+  background-color: #242526;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.sidebarRight__ad > img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.sidebarRight__ad > h4 {
+  color: #b0b3b8;
+  padding: 10px;
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .sidebarRight {
+    display: none !important;
+  }
+}

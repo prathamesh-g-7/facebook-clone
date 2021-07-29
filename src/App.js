@@ -1,56 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./App.css";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import postSlice, { postInfo, selectPosts } from "./features/postSlice";
+import { login, logout, selectUser } from "./features/userSlice";
+import db, { auth } from "./Firebase/firebase";
 
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+
+  const posts = useSelector(selectPosts);
+
+  useEffect(() => {
+    db.collection("posts")
+      .get()
+      .then((snap) =>
+        snap.docs.map((doc) =>
+          dispatch(
+            postInfo({
+              postId: doc.id,
+              postCaption: doc.data().caption,
+              postImage: doc.data().image,
+              postUserId: doc.data().userId,
+              postUserName: doc.data().userName,
+              postUserPhoto: doc.data().userPhoto,
+            })
+          )
+        )
+      );
+
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // displatch login action
+        dispatch(
+          login({
+            id: authUser?.uid,
+            photo: authUser?.photoURL,
+            email: authUser?.email,
+            displayName: authUser?.displayName,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="app">
+      {user ? (
+        <>
+          <Header />
+          <Home />
+        </>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }

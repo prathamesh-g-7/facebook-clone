@@ -1,0 +1,87 @@
+.sidebar {
+  display: block;
+  margin-top: 0px;
+  padding: 20px;
+  width: 20%;
+  position: fixed;
+  top: 70px;
+}
+
+.sidebar__top {
+  display: flex;
+  align-items: center;
+  color: rgb(219, 219, 219);
+}
+
+.sidebar__top > h3 {
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  padding: 8px;
+}
+
+.sidebar__menu {
+  margin-top: 10px;
+}
+
+.sidebar__menuItem {
+  display: flex;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.sidebar__menuItem:hover {
+  background-color: rgba(126, 126, 126, 0.2);
+}
+
+.sidebar__menuItem > h3 {
+  color: rgb(219, 219, 219);
+  letter-spacing: 0.8px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.sidebar__menuItem > .MuiSvgIcon-root {
+  font-size: 32px !important;
+}
+
+.friends {
+  color: #6dccb4;
+}
+
+.groups {
+  color: #5582ac;
+}
+
+.market {
+  color: #23a4f0;
+}
+.watch {
+  color: #186fde;
+}
+.events {
+  color: #f0506c;
+}
+.memories {
+  color: #ce933c;
+}
+.saved {
+  color: #9f38c9;
+}
+.pages {
+  color: #f0652b;
+}
+.jobs {
+  color: #e0913d;
+}
+
+.logout {
+  color: #c03d8e;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none !important;
+  }
+}
